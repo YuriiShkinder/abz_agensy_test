@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+    <h1 class="company"><a href="index.html">Company Name</a></h1>
+    <div class="buttons">
+        <button class="btn login">Login</button>
+        <button class="btn logout">Logout</button>
+        <button class="btn crud"><a href="index.html">Home</a></button>
+    </div>
+
+</header>
+
+<div class="crud__content">
+    <aside class="crud__aside">
+        <form class="crud__form" action="#">
+            <label for="department">Отдел</label>
+            <select id="department">
+                <option>department1</option>
+                <option value="http://192.168.1.6:8080/employees-department/department1">department1</option>
+                <option value="http://192.168.1.6:8080/employees-department/department3">3</option>
+                <option value="http://192.168.1.6:8080/employees-department/department4">4</option>
+                <option>5</option>
+                <option>5</option>
+                <option>6</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+            </select>
+            <label for="sort">Сортировать</label>
+            <select id="sort" name="sort">
+                <option>Без сортировки</option>
+                <option value="first_name">First Name</option>
+                <option value="last_name">Last Name</option>
+                <option>Salary</option>
+                <option>Position</option>
+            </select>
+            <div class="order" data-url="http://192.168.1.6:8080/orderBy-employees">
+                <label>po ubivaniu
+                    <input name="orderBy" type="radio" value="desk" checked>
+                </label>
+                <br>
+                <label>po vozrostaniyu
+                    <input name="orderBy" type="radio" value="asc">
+                </label>
+            </div>
+            <a href="http://192.168.1.6:8080/create-employee/department1" class="btn addUser">Add User</a>
+        </form>
+    </aside>
+    <div class="employees" current_page="http://192.168.1.6:8080/next-page-employees" last_page="5">
+        <div class="employees__onload">
+            <div class="load"></div>
+        </div>
+        <form action="http://192.168.1.6:8080/search-employees" class="search__form">
+            <p>Search employee:</p>
+            <select name="field" title="names">
+                <option disabled selected> выфвфв</option>
+                <option value="first_name">First Name</option>
+                <option value="last_name">Last Name</option>
+                <option>Salary</option>
+                <option>Employment date</option>
+                <option>boss</option>
+            </select>
+            <input type="search" name="value" title="search">
+        </form>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>4ekyshka</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>over9000 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss Boss</p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>123</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>100 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss </p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>4ekyshka</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>over9000 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss Boss</p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>123</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>100 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss </p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>4ekyshka</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>over9000 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss Boss</p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>123</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>100 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss </p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>4ekyshka</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>over9000 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss Boss</p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>123</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>100 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss </p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>4ekyshka</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>over9000 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss Boss</p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>123</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>100 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss </p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>4ekyshka</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>over9000 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss Boss</p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>123</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>100 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss </p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>4ekyshka</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>over9000 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss Boss</p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>123</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>100 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss </p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>4ekyshka</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>over9000 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss Boss</p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+        <div class="employees__item">
+            <div class="photo"><img src="img/3.png" alt=""></div>
+            <div class="firstName">
+                <span class="employee__block__label">First Name</span>
+                <p>Ivan</p>
+            </div>
+            <div class="lastName">
+                <span class="employee__block__label">Last Name</span>
+                <p>123</p>
+            </div>
+            <div class="salary">
+                <span class="employee__block__label">Salary</span>
+                <p>100 $</p>
+            </div>
+            <div class="date">
+                <span class="employee__block__label">Employment date</span>
+                <p>16.12.1995</p>
+            </div>
+            <div class="boss">
+                <span class="employee__block__label">Boss</span>
+                <p>Boss </p>
+            </div>
+            <div class="remove__item">X</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal">
+    <div class="modal__close">X</div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/crud.js"></script>
+</body>
+</html>

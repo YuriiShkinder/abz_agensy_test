@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+   web:
+      build:
+        context: ./docker/web
+      volumes:
+        - .:/var/www/html
+      ports:
+        - 8080:80
+      environment:
+            DB_PORT: 3306
+            DB_HOST: db
+   db:
+     image: mysql:5.7
+     restart: always
+     ports:
+       - 13306:3306
+     environment:
+        MYSQL_ROOT_PASSWORD: abz
+        MYSQL_DATABASE: abz
+        MYSQL_USER: abz
+        MYSQL_PASSWORD: abz
+   adminer:
+        image: adminer
+        ports:
+          - 8888:8080
